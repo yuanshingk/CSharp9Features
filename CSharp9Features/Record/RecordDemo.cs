@@ -55,7 +55,11 @@
 
         public CopyCatMember CreateCopyCatMember(Member member)
         {
-            return new(member.FirstName, member.LastName);
+            return new(member.FirstName, member.LastName)
+            {
+                Id = member.Id,
+                ContactInformation = member.ContactInformation
+            };
         }
     }
 }
